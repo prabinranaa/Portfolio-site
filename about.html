@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="About.css">
+</head>
+<body>
+
+        <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">Prabin</div>
+            <button class="menu-btn" id="menuBtn">Menu</button>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Work</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+            <button class="close-btn" id="closeBtn">Close</button>
+
+        </div>
+    </nav>
+
+
+        <!-- Hero Section with Profile -->
+    <section class="about-hero">
+        <div class="container">
+            <div class="profile-section">
+                <div class="profile-left">
+                    <div class="profile-image">
+                        <!-- Replace with your actual image -->
+                        <img src="images/me.png" alt="Prabin Rane">
+                    </div>
+                    <div class="profile-info">
+                        <p class="profile-title">Web Designer & Code+<br>Webflow Developer</p>
+                    </div>
+                </div>
+                <div class="profile-right">
+                    <h1 class="large-hi">HI</h1>
+                    <p class="tagline">Growth + Peace</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="main-content">
+        <div class="container">
+            <div class="content-block">
+                <h2 class="content-title">For me, good design is less about showing off and more about making things work.</h2>
+                <p class="content-text">
+                    I'm Prabin, a designer and frontend developer with a strong interest in building clean, thoughtful websites. I've always been drawn to both creativity and technology, and today I bring that curiosity into the way I design and build for the web. Outside of client work, I'm usually exploring new ideas, refining my skills, or experimenting with better ways to turn concepts into real, usable products. I believe in learning through practice, staying intentional with my work, and continuously improving with each project.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Approach & Collaboration Section -->
+    <section class="approach-section">
+        <div class="container">
+            <div class="approach-grid">
+                <div class="approach-item">
+                    <h3>My Approach</h3>
+                    <ul>
+                        <li>Design with implementation in mind</li>
+                        <li>Build production-ready, scalable frontends</li>
+                        <li>Focus on layout, typography, and polish</li>
+                        <li>Prioritize clarity and reliability in every project</li>
+                    </ul>
+                </div>
+                <div class="divider"></div>
+                <div class="approach-item">
+                    <h3>Collaboration & Availability</h3>
+                    <p>I work closely with agency teams, communicating clearly and iterating quickly to deliver polished results. I am available for freelance or contract work and can seamlessly integrate into existing projects to help teams move faster and stay on track.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+        <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2> Interested in working together? I’m always open to new collaborations. </h2>
+            <a href="contact.html" class="cta-button">Contact </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-links">
+                    <a href="index.html">Work</a>
+                    <a href="about.html">About</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="footer-info">
+                    <p>Info</p>
+                    <p>prabin.webdesign@gmail.com</p>
+                </div>
+                <div class="footer-connect">
+                    <p>Connect</p>
+                    <p>Linked in</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© Copyright reserved 2026</p>
+            </div>
+        </div>
+    </footer>
+
+<script>
+
+
+
+
+const menuBtn = document.getElementById("menuBtn");
+const navLinks = document.getElementById("navLinks");
+const closeBtn = document.getElementById("closeBtn");
+
+menuBtn.addEventListener("click", () => {
+  navLinks.classList.add("active");
+});
+
+closeBtn.addEventListener("click", () => {
+  navLinks.classList.remove("active");
+});
+
+navLinks.querySelectorAll("a").forEach(link => {
+  link.addEventListener("click", () => {
+    navLinks.classList.remove("active");
+  });
+});
+
+
+
+
+  
+</script>
+
+</body>
+</html>

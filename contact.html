@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Contact.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">Prabin</div>
+            <button class="menu-btn" id="menuBtn">Menu</button>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Work</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+            <button class="close-btn" id="closeBtn">Close</button>
+
+        </div>
+    </nav>
+
+
+         <!-- Contact Section-->
+
+        <div class="container">
+             <h1 class="Contact-st"> Start?</h1>
+        </div>
+
+        <div class="content">
+            <div class="content-top">
+                <h3 class="head">Share your vision? </h3>
+
+            </div>
+            <div class="content-bottom">
+                <p>Lets build something amazing this world has ever seen</p>
+
+            </div>
+
+        </div>
+  <!-- Contact Form Section -->
+    <section class="contact-form-section">
+        <div class="container">
+            <div class="form-wrapper">
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <textarea id="message" name="message" rows="1" placeholder="Your Message" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-button">Submit?</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="wanna-see">
+        <div class="container">
+            <h2>Wanna see more?</h2>
+            <a href="index.html" class="work-link">← Work</a>
+        </div>
+    </section>
+
+        <!-- Footer -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-links">
+                    <a href="index.html">Work</a>
+                    <a href="about.html">About</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="footer-info">
+                    <p>Info</p>
+                    <p>prabin.webdesign@gmail.com</p>
+                </div>
+                <div class="footer-connect">
+                    <p>Connect</p>
+                    <p>Linked in</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© Copyright reserved 2026</p>
+            </div>
+        </div>
+    </footer>
+    <!-- EmailJS SDK -->
+<!-- EmailJS SDK -->
+<script type="text/javascript" src="https://cdn.emailjs.com/sdk/3.2/email.min.js"></script>
+<script type="text/javascript">
+  // Initialize EmailJS
+  emailjs.init("npOyXGTaSR5i93ZEG");
+
+  const form = document.querySelector(".contact-form");
+  const submitButton = form.querySelector(".submit-button");
+
+  // Create a message box dynamically
+  const messageBox = document.createElement("div");
+  messageBox.style.marginTop = "1rem";
+  messageBox.style.fontSize = "1rem";
+  messageBox.style.fontWeight = "500";
+  form.appendChild(messageBox);
+
+  form.addEventListener("submit", function(e) {
+      e.preventDefault(); // prevent default form submission
+
+      // Set loading state
+      submitButton.disabled = true;
+      submitButton.textContent = "Sending...";
+      messageBox.textContent = "";
+
+      emailjs.sendForm("service_hfs65zk", "template_0f3oe3i", this)
+        .then(() => {
+          messageBox.style.color = "#4BB543"; // green for success
+          messageBox.textContent = "Message sent successfully!";
+          form.reset();
+        })
+        .catch((err) => {
+          messageBox.style.color = "#FF4C4C"; // red for error
+          messageBox.textContent = "Failed to send message. Please try again.";
+          console.error("EmailJS error:", err);
+        })
+        .finally(() => {
+          // Reset button
+          submitButton.disabled = false;
+          submitButton.textContent = "Submit?";
+        });
+  });
+</script>
+
+<script>
+
+    const menuBtn = document.getElementById("menuBtn");
+const navLinks = document.getElementById("navLinks");
+const closeBtn = document.getElementById("closeBtn");
+
+menuBtn.addEventListener("click", () => {
+  navLinks.classList.add("active");
+});
+
+closeBtn.addEventListener("click", () => {
+  navLinks.classList.remove("active");
+});
+
+navLinks.querySelectorAll("a").forEach(link => {
+  link.addEventListener("click", () => {
+    navLinks.classList.remove("active");
+  });
+});
+
+</script>
+
+</body>
+</html>

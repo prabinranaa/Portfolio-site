@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prabin Rane - Web Designer & Developer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">Prabin</div>
+            <button class="menu-btn" id="menuBtn">Menu</button>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Work</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+            <button class="close-btn" id="closeBtn">Close</button>
+
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="head-line">
+                    <div class="hero-head">
+                        <h1 class="hero-title">Prabin Rana</h1>
+                        <p class="hero-subtitle">Web Designer & Developer</p>
+                    </div>
+
+                    <div class="hero-text">
+                        <h2>collaborating with agencies to create modern, well-structured websites focused on clarity, speed, and execution.</h2>
+                    </div>
+
+                </div>
+                <div class="hero-banner">
+                    
+                    <div class="scroll-indicator">
+                        <span>↓ Scroll To Explore</span>
+                    </div>
+                     <div class="contact-info">
+                    <p>CONNECT</p>
+                    <p>prabin.webdesign@gmail.com</p>
+                    <p>Linked in</p>
+                </div>
+                </div>
+               
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about">
+
+            <div class="about-content">
+                <p class="about-text">
+                    I'm Prabin and I works with agencies as as Web designer, and developer, combining design and development to amplify projects that world otherwise require multiple roles. By handling both front-end and back-end development, I accelerate delivery, and maintain consistency from concept to launch.
+                </p>
+                <a href="about.html" class="read-more">Read more</a>
+            </div>
+        <div class="container">
+            <div class="services">
+                <h3>Services</h3>
+                <ul>
+                    <li>Website Design</li>
+                    <li>Code Development</li>
+                    <li>Headless / Frame Development</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Work Section -->
+    <section class="featured-work" id="work">
+        <div class="container">
+            <h2 class="section-title">Featured Work</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <img src="images/1.png" alt="Project 1">
+                </div>
+                <div class="project-card">
+                    <img src="images/2.png" alt="Project 2">
+                </div>
+                <div class="project-card">
+                    <img src="images/3.png" alt="Project 3">
+                </div>
+                <div class="project-card">
+                    <img src="images/4.png" alt="Project 4">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Skills Section -->
+    <section class="skills">
+        <div class="container">
+            <h2 class="section-title">Skills & Tools I use</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Design</h3>
+                    <ul>
+                        <li>UI & Visual Design</li>
+                        <li>Wireframing</li>
+                        <li>Typography and layout</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Development</h3>
+                    <ul>
+                        <li>HTML, CSS, JavaScript</li>
+                        <li>React, Next.js, Sanity</li>
+                        <li>No-code Dev</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Tools</h3>
+                    <ul>
+                        <li>Figma</li>
+                        <li>VS Studio</li>
+                        <li>Framer</li>
+                        <li>Webflow</li>
+                        <li>Github</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="cta-text">
+            <h2> Interested in working together? <span class="visible">always open to new collaborations.</span> </h2>
+
+            <a href="contact.html" class="cta-button">Contact </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-links">
+                    <a href="index.html">Work</a>
+                    <a href="about.html">About</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="footer-info">
+                    <p>Info</p>
+                    <p>prabin.webdesign@gmail.com</p>
+                </div>
+                <div class="footer-connect">
+                    <p>Connect</p>
+                    <p>Linked in</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© Copyright reserved 2026</p>
+            </div>
+        </div>
+    </footer>
+
+<script>
+
+
+
+
+const menuBtn = document.getElementById("menuBtn");
+const navLinks = document.getElementById("navLinks");
+const closeBtn = document.getElementById("closeBtn");
+
+menuBtn.addEventListener("click", () => {
+  navLinks.classList.add("active");
+});
+
+closeBtn.addEventListener("click", () => {
+  navLinks.classList.remove("active");
+});
+
+navLinks.querySelectorAll("a").forEach(link => {
+  link.addEventListener("click", () => {
+    navLinks.classList.remove("active");
+  });
+});
+
+
+
+
+  
+</script>
+
+</body>
+</html>
