@@ -533,13 +533,22 @@ body {
         gap: 2rem;
     }
 
-    .about-content{
-        max-width: 550px;
-        margin-left: 20px;
-        margin-right: 20px;
-        margin-bottom: 6rem;
 
-    }
+
+
+  .about-text {
+    font-size: clamp(16px, 4vw, 24px);
+  }
+
+  .about-content {
+    max-width: 570px;
+
+    margin-bottom: 6rem;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+
     .work-grid {
         grid-template-columns: 1fr;
     }
@@ -645,7 +654,3 @@ body {
 
 
 }
-
-
-
-
